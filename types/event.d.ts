@@ -1,0 +1,3 @@
+interface InvocableEvent {
+  input: any;
+}
