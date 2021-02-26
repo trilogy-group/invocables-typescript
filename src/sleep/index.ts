@@ -1,11 +1,12 @@
 import delay from "./delay";
 
-export default async function handler(
-  event: InvocableEvent,
-  context: InvocableContext
-) {
-  const { input } = event;
+interface InvocableEvent {
+  delayTime: number;
+}
 
-  await delay(input.delay);
-  return { message: `Returned after a delay of ${input.delay}ms` };
+export default async function handler(event: InvocableEvent) {
+  const { delayTime } = event;
+
+  await delay(delayTime);
+  return { message: `Returned after a delay of ${delayTime}ms` };
 }
