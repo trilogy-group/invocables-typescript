@@ -1,4 +1,4 @@
-image: ashwanth1109/devserver:v0.25
+image: ashwanth1109/devserver:v0.26
 ports:
   - port: 8000
     onOpen: open-preview
